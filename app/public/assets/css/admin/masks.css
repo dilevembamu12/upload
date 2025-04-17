@@ -1,0 +1,50 @@
+/* app/public/assets/css/admin/masks.css */
+/* Styles pour l'accordéon */
+.accordion-button:not(.collapsed) {
+    color: #212529;
+    background-color: #e7f1ff;
+}
+
+/* Styles pour la liste des champs */
+#available-fields-list .list-group-item {
+    cursor: pointer;
+}
+
+
+
+/* app/public/assets/css/admin/masks.css */
+
+/* Styles pour l'accordéon */
+.accordion-button:not(.collapsed) {
+    color: #212529;
+    background-color: #e7f1ff;
+}
+
+/* Styles pour la liste des champs */
+#available-fields-list .list-group-item {
+    cursor: pointer;
+}
+
+/* Styles pour les groupes de règles */
+.rule-group {
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.rule-group-header {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.rule-group-content {
+    margin-bottom: 10px;
+}
+
+.add-rule-button {
+    margin-top: 10px;
+}
+.card-footer{
+    margin-top:10px;
+}

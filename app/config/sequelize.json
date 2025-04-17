@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "artfupload3",
+    "password": "artfupload3",
+    "database": "artfupload3",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "artfupload3",
+    "password": "artfupload3",
+    "database": "artfupload3",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "artfupload3",
+    "password": "artfupload3",
+    "database": "artfupload3",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}

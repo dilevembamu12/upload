@@ -1,0 +1,35 @@
+<% 
+console.log("=========>>>>>>>>>>>",active_depth1)
+console.log("=========+++++++++", isNaN(active_depth2) )
+if(!active_depth2){ active_depth2="INDEX"};
+%>
+<!-- Breadcrumb -->
+<div class="d-md-flex d-block align-items-center justify-content-between page-breadcrumb mb-3">
+    <div class="my-auto mb-2">
+        <h2 class="mb-1"> <%= __.__('EJS.'+active_depth1.toUpperCase()+'.PAGE.NAME')  %></h2>
+        <nav>
+            <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item">
+                    <a href="index.html"><i class="ti ti-smart-home"></i></a>
+                </li>
+                <li class="breadcrumb-item">
+                    <%= __.__('EJS.'+active_depth1.toUpperCase()+'.PAGE._DEPTH')  %>
+                </li>
+                
+                <li class="breadcrumb-item active" aria-current="page"><%= __.__('EJS.'+active_depth1.toUpperCase()+'.PAGE.DEPTH.'+active_depth2.toUpperCase())  %></li>
+            </ol>
+        </nav>
+    </div>
+    <div class="d-flex my-xl-auto right-content align-items-center flex-wrap ">
+        
+        <div class="mb-2">
+            <% if (active_depth2=="create" || !isNaN(active_depth2) ) { %>
+                <a href="<%=req.originalUrl.substring(0, req.originalUrl.lastIndexOf('/')) %>" 
+                    class="btn btn-primary d-flex align-items-center"><i class="ti ti-circle-plus me-2"></i><%= __.__('EJS.'+active_depth1.toUpperCase()+'.PAGE.BUTTON.LIST')  %></a>
+            <% } else { %>
+                <a href="<%=req.originalUrl%>/create" 
+                    class="btn btn-primary d-flex align-items-center"><i class="ti ti-circle-plus me-2"></i><%= __.__('EJS.'+active_depth1.toUpperCase()+'.PAGE.BUTTON.CREATE')  %></a>
+            <%  } %>
+        </div>
+    </div>
+</div>

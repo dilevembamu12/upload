@@ -1,0 +1,172 @@
+{
+	"EJS001": "bonjour",
+	"ERR500": "une erreur est survenue",
+	"NOC.MODUPL.AUTH.001": "une erreur est survenue",
+	"NOC.MODUPL.AUTH.USER.404": "Utilisateur pas trouvé",
+	"NOC.MODUPL.AUTH.USER.PASSWORD.404": "Mot de passe incorrect",
+	"EJS": {
+		"SIGN-IN": {
+			"TITLE": "CONNEXION",
+			"DESCRIPTION": "Veuillez entrer vos identifiants",
+			"LABELS": {
+				"ID": "Email",
+				"PASS": "Mot de passe",
+				"REMEMBER-ME": "Se souvenir de moi",
+				"REGISTER-CTA": "Vous n'avez pas de compte"
+			},
+			"LINKS": {
+				"FORGOT-PASS": "Mot de passe oublié",
+				"REGISTER-CTA": "Créer le"
+			},
+			"BUTTONS": {
+				"SUBMIT": "Se connecter"
+			}
+		},
+		"FIELD": {
+			"PAGE": {
+				"NAME": "EJS.FIELD.PAGE.NAME",
+				"NAMEfields": "EJS.FIELD.PAGE.NAMEfields"
+			}
+		},
+		"FIELDS": {
+			"PAGE": {
+				"NAME": "EJS.FIELDS.PAGE.NAME",
+				"DEPTH": {
+					"3": "EJS.FIELDS.PAGE.DEPTH.3",
+					"4": "EJS.FIELDS.PAGE.DEPTH.4",
+					"207": "EJS.FIELDS.PAGE.DEPTH.207",
+					"FIELDS": "EJS.FIELDS.PAGE.DEPTH.FIELDS",
+					"INDEX": "EJS.FIELDS.PAGE.DEPTH.INDEX",
+					"CREATE": "EJS.FIELDS.PAGE.DEPTH.CREATE"
+				},
+				"BUTTON": {
+					"CREATE": "EJS.FIELDS.PAGE.BUTTON.CREATE",
+					"LIST": "EJS.FIELDS.PAGE.BUTTON.LIST"
+				},
+				"_DEPTH": "EJS.FIELDS.PAGE._DEPTH"
+			}
+		},
+		"RULES": {
+			"PAGE": {
+				"NAME": "EJ",
+				"DEPTH": {
+					"1": "EJS.RULES.PAGE.DEPTH.1",
+					"2": "EJS.RULES.PAGE.DEPTH.2",
+					"3": "EJS.RULES.PAGE.DEPTH.3",
+					"4": "EJS.RULES.PAGE.DEPTH.4",
+					"RULES": "EJS.RULES.PAGE.DEPTH.RULES",
+					"INDEX": "EJS.RULES.PAGE.DEPTH.INDEX",
+					"CREATE": "EJS.RULES.PAGE.DEPTH.CREATE"
+				},
+				"BUTTON": {
+					"CREATE": "Ajouter une Règle",
+					"LIST": "EJS.RULES.PAGE.BUTTON.LIST"
+				},
+				"_DEPTH": "EJS.RULES.PAGE._DEPTH"
+			}
+		},
+		"": {
+			"PAGE": {
+				"DEPTH": {
+					"INDEX": "EJS..PAGE.DEPTH.INDEX"
+				},
+				"NAME": "EJS..PAGE.NAME",
+				"_DEPTH": "EJS..PAGE._DEPTH",
+				"BUTTON": {
+					"CREATE": "EJS..PAGE.BUTTON.CREATE"
+				}
+			}
+		},
+		"FIELDSA": "EJS.FIELDSA",
+		"MASKS": {
+			"PAGE": {
+				"NAME": "EJS.MASKS.PAGE.NAME",
+				"_DEPTH": "EJS.MASKS.PAGE._DEPTH",
+				"DEPTH": {
+					"INDEX": "EJS.MASKS.PAGE.DEPTH.INDEX",
+					"CREATE": "EJS.MASKS.PAGE.DEPTH.CREATE"
+				},
+				"BUTTON": {
+					"CREATE": "EJS.MASKS.PAGE.BUTTON.CREATE",
+					"LIST": "EJS.MASKS.PAGE.BUTTON.LIST"
+				}
+			}
+		}
+	},
+	"/mnt/e/PROJET/INTERNE/FBB/BYNAMIQUE/NODE/ARTF/upload3/app/resources/views/pages/auth/index": {
+		"ejs": "1\n >> 1| <%\n    2| alert(11111111111);\n    3| %>\n\nalert is not defined"
+	},
+	"Unexpected token 'e', \"email=emod\"": {
+		"": {
+			"": {
+				" is not valid JSON": "Unexpected token 'e', \"email=emod\"... is not valid JSON"
+			}
+		}
+	},
+	"stream is not readable": "stream is not readable",
+	"\"[object Object]\" is not valid JSON": "\"[object Object]\" is not valid JSON",
+	"Failed to lookup view \"pages/admin\" in views directory \"/mnt/e/PROJET/INTERNE/FBB/BYNAMIQUE/NODE/ARTF/upload3/app/resources/views\"": "Failed to lookup view \"pages/admin\" in views directory \"/mnt/e/PROJET/INTERNE/FBB/BYNAMIQUE/NODE/ARTF/upload3/app/resources/views\"",
+	"error": "error",
+	"next is not defined": "next is not defined",
+	"res is not defined": "res is not defined",
+	"req is not defined": "req is not defined",
+	"Cannot set headers after they are sent to the client": "Cannot set headers after they are sent to the client",
+	"token invalid": "token invalid",
+	"token is not defined": "token is not defined",
+	"/mnt/e/PROJET/INTERNE/FBB/BYNAMIQUE/NODE/ARTF/upload3/app/resources/views/layouts/app": {
+		"ejs": "41\n    39|     <div class=\"main-wrapper\">\n    40|         <%- include('partials/header'); %>\n >> 41|         <%- include('partials/sidebar'); %>\n    42| \n    43| \n    44|                 <!-- Page Wrapper -->\n\n/mnt/e/PROJET/INTERNE/FBB/BYNAMIQUE/NODE/ARTF/upload3/app/resources/views/layouts/partials/sidebar.ejs:1\n >> 1| <%= people.join(\", \"); %>'\n    2| <!-- Sidebar -->\n    3| <div class=\"sidebar\" id=\"sidebar\">\n    4|     <!-- Logo -->\n\npeople is not defined"
+	},
+	"missing ) after argument list in /mnt/e/PROJET/INTERNE/FBB/BYNAMIQUE/NODE/ARTF/upload3/app/resources/views/layouts/app": {
+		"ejs while compiling ejs\n\nIf the above error is not helpful, you may want to try EJS-Lint": "\nhttps://github.com/RyanZim/EJS-Lint\nOr, if you meant to create an async function, pass `async: true` as an option."
+	},
+	"Unexpected token 'var' in /mnt/e/PROJET/INTERNE/FBB/BYNAMIQUE/NODE/ARTF/upload3/app/resources/views/layouts/app": {
+		"ejs while compiling ejs\n\nIf the above error is not helpful, you may want to try EJS-Lint": "\nhttps://github.com/RyanZim/EJS-Lint\nOr, if you meant to create an async function, pass `async: true` as an option."
+	},
+	"Failed to lookup view \"pages/admin/entity/create\" in views directory \"/mnt/e/PROJET/INTERNE/FBB/BYNAMIQUE/NODE/ARTF/upload3/app/resources/views\"": "Failed to lookup view \"pages/admin/entity/create\" in views directory \"/mnt/e/PROJET/INTERNE/FBB/BYNAMIQUE/NODE/ARTF/upload3/app/resources/views\"",
+	"Failed to lookup view \"pages/admin/entities/\" in views directory \"/mnt/e/PROJET/INTERNE/FBB/BYNAMIQUE/NODE/ARTF/upload3/app/resources/views\"": "Failed to lookup view \"pages/admin/entities/\" in views directory \"/mnt/e/PROJET/INTERNE/FBB/BYNAMIQUE/NODE/ARTF/upload3/app/resources/views\"",
+	"Failed to lookup view \"layouts/app\" in views directory \"/mnt/e/PROJET/INTERNE/FBB/BYNAMIQUE/NODE/ARTF/upload3/app/resources/views\"": "Failed to lookup view \"layouts/app\" in views directory \"/mnt/e/PROJET/INTERNE/FBB/BYNAMIQUE/NODE/ARTF/upload3/app/resources/views\"",
+	"Failed to lookup view \"layouts/auth\" in views directory \"/mnt/e/PROJET/INTERNE/FBB/BYNAMIQUE/NODE/ARTF/upload3/app/resources/views\"": "Failed to lookup view \"layouts/auth\" in views directory \"/mnt/e/PROJET/INTERNE/FBB/BYNAMIQUE/NODE/ARTF/upload3/app/resources/views\"",
+	"Failed to lookup view \"pages/admin/masks/create\" in views directory \"/mnt/e/PROJET/INTERNE/FBB/BYNAMIQUE/NODE/ARTF/upload3/app/resources/views\"": "Failed to lookup view \"pages/admin/masks/create\" in views directory \"/mnt/e/PROJET/INTERNE/FBB/BYNAMIQUE/NODE/ARTF/upload3/app/resources/views\"",
+	"Failed to lookup view \"pages/admin/fields/store\" in views directory \"/mnt/e/PROJET/INTERNE/FBB/BYNAMIQUE/NODE/ARTF/upload3/app/resources/views\"": "Failed to lookup view \"pages/admin/fields/store\" in views directory \"/mnt/e/PROJET/INTERNE/FBB/BYNAMIQUE/NODE/ARTF/upload3/app/resources/views\"",
+	"NOC": {
+		"MODUPL": {
+			"AUTH": {
+				"USER": {
+					"PASSWORD": {
+						"404": "NOC.MODUPL.AUTH.USER.PASSWORD.404"
+					},
+					"USER": {
+						"404": "NOC.MODUPL.AUTH.USER.USER.404"
+					}
+				}
+			}
+		}
+	},
+	"": "",
+	"NaN": "NaN",
+	"undefined53": "undefined53",
+	"Field non trouvé": "Field non trouvé",
+	"SequelizeValidationError": "SequelizeValidationError",
+	"Failed to create field": "Failed to create field",
+	"notNull Violation": " Field.name cannot be null",
+	"Data truncated for column 'type' at row 1": "Data truncated for column 'type' at row 1",
+	"Unknown column 'required' in 'SELECT'": "Unknown column 'required' in 'SELECT'",
+	"Validation error": " FIELD.FIELDS.ISALPHA",
+	"You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1": "You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1",
+	"Cannot access 'dt' before initialization": "Cannot access 'dt' before initialization",
+	"Failed to retrieve fields": "Failed to retrieve fields",
+	"Unknown column 'required' in 'INSERT INTO'": "Unknown column 'required' in 'INSERT INTO'",
+	"/mnt/e/PROJET/INTERNE/FBB/BYNAMIQUE/NODE/ARTF/upload3/app/resources/views/pages/admin/fields/index": {
+		"ejs": "5\n    3|     <div class=\"d-md-flex d-block align-items-center justify-content-between page-breadcrumb mb-3\">\n    4|         <div class=\"my-auto mb-2\">\n >> 5|             <h2 class=\"mb-1\"> <%- defineContent('breadcrumb-name') %></h2>\n    6|             <nav>\n    7|                 <ol class=\"breadcrumb mb-0\">\n    8|                     <li class=\"breadcrumb-item\">\n\ndefineContent is not defined"
+	},
+	"FIELDS": "FIELDS",
+	"Failed to retrieve field": "Failed to retrieve field",
+	"SequelizeDatabaseError": "SequelizeDatabaseError",
+	"Failed to create rule": "Failed to create rule",
+	"/mnt/e/PROJET/INTERNE/FBB/BYNAMIQUE/NODE/ARTF/upload3/app/resources/views/pages/admin/rules/index": {
+		"ejs": "22\n    20| \n    21| <%- contentFor('javascript') %>\n >> 22|     <%- include('partials/scripts'); %>\n\nCould not find the include file \"partials/scripts\""
+	},
+	"/mnt/e/PROJET/INTERNE/FBB/BYNAMIQUE/NODE/ARTF/upload3/app/resources/views/pages/admin/rules/show": {
+		"ejs": "18\n    16| \n    17|         <div class=\"card-footer bg-light py-3 d-flex justify-content-end\">\n >> 18|             <a href=\"/admin/fields/<%= field.id %>/edit\" class=\"btn btn-warning me-2\">\n    19|               <i class=\"ti ti-edit me-1\"></i> Modifier\n    20|             </a>\n    21|             <button class=\"btn btn-danger delete-field\" data-id=\"<%= field.id %>\">\n\nfield is not defined"
+	}
+}

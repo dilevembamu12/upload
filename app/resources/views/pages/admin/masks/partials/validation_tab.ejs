@@ -1,0 +1,22 @@
+<!-- app/resources/views/pages/admin/masks/partials/validation_tab.ejs -->
+<div class="mt-3">
+    <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="required-<%= fieldId %>" name="fields[<%= fieldId %>][required]">
+        <label class="form-check-label" for="required-<%= fieldId %>">Champ obligatoire</label>
+    </div>
+    <hr class="text-muted">
+
+    <h5>Règles d'application</h5>
+
+    <!-- Règles simples -->
+    <div id="simple-rules-container-<%= fieldId %>">
+        <h6>Règles simples</h6>
+         <button type="button" class="btn btn-sm btn-primary add-simple-rule-button" data-field-id="<%= fieldId %>">Ajouter une règle simple</button>
+    </div>
+
+    <!-- Groupes de règles -->
+    <div id="rule-groups-container-<%= fieldId %>">
+        <h6>Groupes de règles</h6>
+        <button type="button" class="btn btn-sm btn-primary add-rule-group-button" data-field-id="<%= fieldId %>">Ajouter un groupe de règles</button>
+    </div>
+</div>

@@ -1,0 +1,47 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title">Formulaire d'ajout des champs</h5>
+            </div>
+            <div class="card-body">
+                <form id="create-field-form">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Nom</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="type" class="form-label">Type</label>
+                        <select class="form-select" id="type" name="type" required>
+                            <option value="string">String</option>
+                            <option value="number">Number</option>
+                            <option value="select">Select</option>
+                            <option value="ratio">Ratio</option>
+                            <option value="boolean">Boolean</option>
+                            <option value="textarea">Textarea</option>
+                            <option value="date">Date</option>
+                            <option value="email">Email</option>
+                            <option value="group">Group</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="label" class="form-label">Label</label>
+                        <input type="text" class="form-control" id="label" name="label">
+                    </div>
+                    <div class="mb-3">
+                        <label for="description" class="form-label">Description</label>
+                        <textarea class="form-control" id="description" name="description"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="options" class="form-label">Options (JSON)</label>
+                        <textarea class="form-control" id="options" name="options"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enregistrer</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- contentFor('javascript') %>
+    <%- include('partials/scripts/postform.js'); %>

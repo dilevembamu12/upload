@@ -1,0 +1,63 @@
+<!-- app/resources/views/pages/admin/rules/edit.ejs -->
+<%- contentFor('body') %>
+<div class="container">
+    <h1>Modifier une règle</h1>
+    <div class="card">
+        <div class="card-body">
+            <form id="edit-rule-form" data-id="<%= rule.id %>">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Nom</label>
+                    <input type="text" class="form-control" id="name" name="name" value="<%= rule.name %>" required>
+                </div>
+                <div class="mb-3">
+                    <label for="type" class="form-label">Type</label>
+                    <select class="form-control" id="type" name="type" required>
+                        <option value="required" <%= rule.type === 'required' ? 'selected' : '' %>>Obligatoire</option>
+                        <option value="minLength" <%= rule.type === 'minLength' ? 'selected' : '' %>>Longueur minimale</option>
+                        <option value="maxLength" <%= rule.type === 'maxLength' ? 'selected' : '' %>>Longueur maximale</option>
+                        <option value="regex" <%= rule.type === 'regex' ? 'selected' : '' %>>Expression régulière</option>
+                        <option value="email" <%= rule.type === 'email' ? 'selected' : '' %>>Email</option>
+                        <option value="date" <%= rule.type === 'date' ? 'selected' : '' %>>Date</option>
+                        <option value="number" <%= rule.type === 'number' ? 'selected' : '' %>>Nombre</option>
+                        <option value="integer" <%= rule.type === 'integer' ? 'selected' : '' %>>Entier</option>
+                        <option value="boolean" <%= rule.type === 'boolean' ? 'selected' : '' %>>Booléen</option>
+                        <option value="iban" <%= rule.type === 'iban' ? 'selected' : '' %>>IBAN</option>
+                        <option value="bic" <%= rule.type === 'bic' ? 'selected' : '' %>>BIC</option>
+                        <option value="equalsTo" <%= rule.type === 'equalsTo' ? 'selected' : '' %>>Égal à</option>
+                        <option value="differentTo" <%= rule.type === 'differentTo' ? 'selected' : '' %>>Différent de</option>
+                        <option value="contains" <%= rule.type === 'contains' ? 'selected' : '' %>>Contient</option>
+                        <option value="notContains" <%= rule.type === 'notContains' ? 'selected' : '' %>>Ne contient pas</option>
+                        <option value="inList" <%= rule.type === 'inList' ? 'selected' : '' %>>Dans la liste</option>
+                        <option value="notInList" <%= rule.type === 'notInList' ? 'selected' : '' %>>Pas dans la liste</option>
+                        <option value="KYCChecker" <%= rule.type === 'KYCChecker' ? 'selected' : '' %>>KYC Checker</option>
+                        <option value="TransactionConformity" <%= rule.type === 'TransactionConformity' ? 'selected' : '' %>>Transaction Conformity</option>
+                        <option value="DuplicateDetection" <%= rule.type === 'DuplicateDetection' ? 'selected' : '' %>>Détection de doublons</option>
+                        <option value="custom" <%= rule.type === 'custom' ? 'selected' : '' %>>Personnalisé</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="description" class="form-label">Description</label>
+                    <textarea class="form-control" id="description" name="description"><%= rule.description %></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="parameters" class="form-label">Paramètres (JSON)</label>
+                    <textarea class="form-control" id="parameters" name="parameters"><%= rule.parameters %></textarea>
+                    <small class="form-text text-muted">Utilisez un format JSON valide pour les paramètres.</small>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message d'erreur</label>
+                    <input type="text" class="form-control" id="message" name="message" value="<%= rule.message %>">
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="is_active" name="is_active" <%= rule.is_active ? 'checked' : '' %>>
+                    <label class="form-check-label" for="is_active">Actif</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Enregistrer</button>
+                <a href="/admin/rules" class="btn btn-secondary">Annuler</a>
+            </form>
+        </div>
+    </div>
+</div>
+
+<%- contentFor('javascript') %>
+    <%- include('partials/scripts/index.js'); %>

@@ -1,0 +1,48 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title">Modifier un champ</h5>
+            </div>
+            <div class="card-body">
+                <form id="edit-field-form" data-id="<%= field.id %>">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Nom</label>
+                        <input type="text" class="form-control" id="name" name="name" value="<%= field.name %>" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="type" class="form-label">Type</label>
+                        <select class="form-control" id="type" name="type" required>
+                            <option value="string" <%= field.type === 'string' ? 'selected' : '' %>>Texte</option>
+                            <option value="number" <%= field.type === 'number' ? 'selected' : '' %>>Nombre</option>
+                            <option value="select" <%= field.type === 'select' ? 'selected' : '' %>>Liste déroulante</option>
+                            <option value="ratio" <%= field.type === 'ratio' ? 'selected' : '' %>>Ratio</option>
+                            <option value="boolean" <%= field.type === 'boolean' ? 'selected' : '' %>>Booléen</option>
+                            <option value="textarea" <%= field.type === 'textarea' ? 'selected' : '' %>>Zone de texte</option>
+                            <option value="date" <%= field.type === 'date' ? 'selected' : '' %>>Date</option>
+                            <option value="email" <%= field.type === 'email' ? 'selected' : '' %>>Email</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="label" class="form-label">Libellé</label>
+                        <input type="text" class="form-control" id="label" name="label" value="<%= field.label %>">
+                    </div>
+                    <div class="mb-3">
+                        <label for="description" class="form-label">Description</label>
+                        <textarea class="form-control" id="description" name="description"><%= field.description %></textarea>
+                    </div>
+                     <div class="mb-3">
+                        <label for="options" class="form-label">Options (JSON)</label>
+                        <textarea class="form-control" id="options" name="options"><%= field.options %></textarea>
+                        <small class="form-text text-muted">Utilisez un format JSON valide pour les options (par exemple, pour un select : <code>{"options": ["Option 1", "Option 2"]}</code>).</small>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enregistrer</button>
+                    <a href="/admin/fields" class="btn btn-secondary">Annuler</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- contentFor('javascript') %>
+    <%- include('partials/scripts/postform.js'); %>

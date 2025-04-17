@@ -1,0 +1,25 @@
+<!-- app/resources/views/pages/admin/masks/partials/rule_row.ejs -->
+<div class="row mb-2 rule-row" data-rule-id="<%= ruleId %>">
+    <div class="col-md-4">
+        <label for="rule-<%= fieldId %>-<%= ruleId %>" class="form-label">Règle</label>
+        <select class="form-control rule-select" id="rule-<%= fieldId %>-<%= ruleId %>" name="fields[<%= fieldId %>][rules][<%= ruleId %>][ruleId]" data-field-id="<%= fieldId %>" data-rule-id="<%= ruleId %>">
+            <% rules.forEach(rule => { %>
+                <option value="<%= rule.id %>"><%= rule.name %></option>
+            <% }) %>
+        </select>
+    </div>
+    <div class="col-md-4">
+        <label for="response-<%= fieldId %>-<%= ruleId %>" class="form-label">Réponse attendue</label>
+        <select class="form-control response-select" id="response-<%= fieldId %>-<%= ruleId %>" name="fields[<%= fieldId %>][rules][<%= ruleId %>][response]">
+            <option value="true">Vrai</option>
+            <option value="false">Faux</option>
+        </select>
+    </div>
+    <div class="col-md-2">
+        <label for="order-<%= fieldId %>-<%= ruleId %>" class="form-label">Ordre</label>
+        <input type="number" class="form-control order-input" id="order-<%= fieldId %>-<%= ruleId %>" name="fields[<%= fieldId %>][rules][<%= ruleId %>][order]" value="1">
+    </div>
+    <div class="col-md-2">
+        <button type="button" class="btn btn-sm btn-danger remove-rule-button" data-field-id="<%= fieldId %>" data-rule-id="<%= ruleId %>">Supprimer</button>
+    </div>
+</div>

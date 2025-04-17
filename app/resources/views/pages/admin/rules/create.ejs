@@ -1,0 +1,62 @@
+<!-- app/resources/views/pages/admin/rules/create.ejs -->
+<%- contentFor('body') %>
+<div class="container">
+    <h1>Créer une règle</h1>
+    <div class="card">
+        <div class="card-body">
+            <form id="create-rule-form">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Nom</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="type" class="form-label">Type</label>
+                    <select class="form-control" id="type" name="type" required>
+                        <option value="minLength">Longueur minimale</option>
+                        <option value="maxLength">Longueur maximale</option>
+                        <option value="regex">Expression régulière</option>
+                        <option value="email">Email</option>
+                        <option value="date">Date</option>
+                        <option value="number">Nombre</option>
+                        <option value="integer">Entier</option>
+                        <option value="boolean">Booléen</option>
+                        <option value="iban">IBAN</option>
+                        <option value="bic">BIC</option>
+                        <option value="equalsTo">Égal à</option>
+                        <option value="differentTo">Différent de</option>
+                        <option value="contains">Contient</option>
+                        <option value="notContains">Ne contient pas</option>
+                        <option value="inList">Dans la liste</option>
+                        <option value="notInList">Pas dans la liste</option>
+                        <option value="KYCChecker">KYC Checker</option>
+                        <option value="TransactionConformity">Transaction Conformity</option>
+                        <option value="DuplicateDetection">Détection de doublons</option>
+                        <option value="custom">Personnalisé</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="description" class="form-label">Description</label>
+                    <textarea class="form-control" id="description" name="description"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="parameters" class="form-label">Paramètres (JSON)</label>
+                    <textarea class="form-control" id="parameters" name="parameters"></textarea>
+                    <small class="form-text text-muted">Utilisez un format JSON valide pour les paramètres.</small>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message d'erreur</label>
+                    <input type="text" class="form-control" id="message" name="message">
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="is_active" name="is_active" checked>
+                    <label class="form-check-label" for="is_active">Actif</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Enregistrer</button>
+                <a href="/admin/rules" class="btn btn-secondary">Annuler</a>
+            </form>
+        </div>
+    </div>
+</div>
+
+<%- contentFor('javascript') %>
+    <%- include('partials/scripts/postform.js'); %>

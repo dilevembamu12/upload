@@ -1,0 +1,22 @@
+<!-- app/resources/views/pages/admin/rules/index.ejs -->
+<%- contentFor('body') %>
+<div class="container">
+    <h1>Liste des règles</h1>
+    <a href="/admin/rules/create" class="btn btn-primary">Créer une règle</a>
+
+    <table id="rules-table" class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nom</th>
+                <th>Type</th>
+                <th>Description</th>
+                <th>Actif</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+    </table>
+</div>
+
+<%- contentFor('javascript') %>
+    <%- include('partials/scripts/index.js'); %>

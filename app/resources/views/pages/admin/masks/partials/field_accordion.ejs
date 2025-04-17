@@ -1,0 +1,26 @@
+<!-- app/resources/views/pages/admin/masks/partials/field_accordion.ejs -->
+<div class="accordion-item">
+    <h2 class="accordion-header" id="heading<%= fieldId %>">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<%= fieldId %>" aria-expanded="true" aria-controls="collapse<%= fieldId %>">
+            Champ : <span id="selectedFieldName<%= fieldId %>"></span>
+        </button>
+    </h2>
+    <div id="collapse<%= fieldId %>" class="accordion-collapse collapse show" aria-labelledby="heading<%= fieldId %>" data-bs-parent="#fields-container">
+        <div class="accordion-body">
+            <nav>
+                <div class="nav nav-tabs" id="nav-tab-<%= fieldId %>" role="tablist">
+                    <button class="nav-link active" id="nav-general-tab-<%= fieldId %>" data-bs-toggle="tab" data-bs-target="#nav-general-<%= fieldId %>" type="button" role="tab" aria-controls="nav-general" aria-selected="true">Général</button>
+                    <button class="nav-link" id="nav-validation-tab-<%= fieldId %>" data-bs-toggle="tab" data-bs-target="#nav-validation-<%= fieldId %>" type="button" role="tab" aria-controls="nav-validation" aria-selected="false">Validation</button>
+                </div>
+            </nav>
+            <div class="tab-content" id="nav-tabContent-<%= fieldId %>">
+                <div class="tab-pane fade show active" id="nav-general-<%= fieldId %>" role="tabpanel" aria-labelledby="nav-general-tab-<%= fieldId %>">
+                    <%- include('./general_tab', { fieldId: fieldId }) %>
+                </div>
+                <div class="tab-pane fade" id="nav-validation-<%= fieldId %>" role="tabpanel" aria-labelledby="nav-validation-tab-<%= fieldId %>">
+                    <%- include('./validation_tab', { fieldId: fieldId }) %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

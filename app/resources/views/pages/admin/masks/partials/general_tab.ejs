@@ -1,0 +1,15 @@
+<!-- app/resources/views/pages/admin/masks/partials/general_tab.ejs -->
+<div class="mt-3">
+    <div class="mb-3">
+        <label for="default-value-<%= fieldId %>" class="form-label">Valeur par défaut</label>
+        <input type="text" class="form-control" id="default-value-<%= fieldId %>" name="fields[<%= fieldId %>][defaultValue]">
+    </div>
+    <div class="mb-3">
+        <label for="instructions-<%= fieldId %>" class="form-label">Instructions</label>
+        <textarea class="form-control" id="instructions-<%= fieldId %>" name="fields[<%= fieldId %>][instructions]"></textarea>
+    </div>
+    <div class="mb-3">
+        <label for="placeholder-<%= fieldId %>" class="form-label">Placeholder</label>
+        <input type="text" class="form-control" id="placeholder-<%= fieldId %>" name="fields[<%= fieldId %>][placeholder]">
+    </div>
+</div>

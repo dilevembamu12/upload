@@ -1,0 +1,55 @@
+<% 
+console.log(">>>>>>fieldId:+++>",field.id);
+%>
+
+<!-- app/resources/views/pages/admin/fields/show.ejs -->
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header bg-primary text-white py-3">
+                <h5 class="card-title">Formulaire d'ajout des champs</h5>
+            </div>
+            <div class="card-body">
+                <div class="container">
+                        <div class="mb-3">
+                          <label class="form-label fw-bold">Nom :</label>
+                          <p class="form-control-plaintext"><%= field.name %></p>
+                        </div>
+                        <div class="mb-3">
+                          <label class="form-label fw-bold">Type :</label>
+                          <p class="form-control-plaintext"><%= field.type %></p>
+                        </div>
+                        <div class="mb-3">
+                          <label class="form-label fw-bold">Libellé :</label>
+                          <p class="form-control-plaintext"><%= field.label || '-' %></p>
+                        </div>
+                        <div class="mb-3">
+                          <label class="form-label fw-bold">Description :</label>
+                          <p class="form-control-plaintext"><%= field.description || '-' %></p>
+                        </div>
+                        <div class="mb-3">
+                          <label class="form-label fw-bold">Options :</label>
+                          <p class="form-control-plaintext"><%= field.options || '-' %></p>
+                        </div>
+                        <div class="mb-3">
+                          <label class="form-label fw-bold">Requis :</label>
+                          <p class="form-control-plaintext"><%= field.required ? 'Oui' : 'Non' %></p>
+                        </div>
+                </div>
+            </div>
+            
+            <div class="card-footer bg-light py-3 d-flex justify-content-end">
+                <a href="/admin/fields/<%= field.id %>/edit" class="btn btn-warning me-2">
+                  <i class="ti ti-edit me-1"></i> Modifier
+                </a>
+                <button class="btn btn-danger delete-field" data-id="<%= field.id %>">
+                  <i class="ti ti-trash me-1"></i> Supprimer
+                </button>
+              </div>
+        </div>
+    </div>
+</div>
+
+<%- contentFor('javascript') %>
+    <%- include('partials/scripts/index.js'); %>
